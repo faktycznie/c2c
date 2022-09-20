@@ -1,0 +1,14 @@
+.header-title {
+  &--center {
+    text-align: center;
+  }
+  &__heading {
+    margin: 0 0 40px;
+    @media screen and (min-width: 992px) {
+      margin: 0 0 75px;
+      &--big-space {
+        margin: 9px 0 128px;
+      }
+    }
+  }
+}

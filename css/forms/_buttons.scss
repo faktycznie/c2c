@@ -1,0 +1,130 @@
+.btn,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	display: inline-block;
+	margin: 0;
+	border: 1px solid #CFADAC;
+	border-radius: 6px;
+	background: #fff;
+	color: $style;
+	text-decoration: none;
+	padding: 18px 47px;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 24px;
+	text-align: center;
+	cursor: pointer;
+	transition: all ease-in-out 0.2s;
+	&:focus,
+	&:hover {
+		border-color: lighten($style, 5%);
+	}
+
+	&:focus,
+	&.active,
+	&:active {
+		outline: 0;
+	}
+
+	// Disabled state
+	&.disabled,
+	&[disabled] {
+		cursor: default;
+		opacity: .65;
+	}
+}
+
+.btn,
+.btn-wrapper {
+	position: relative;
+	&:before {
+		content: '';
+		position: absolute;
+		bottom: 2px;
+		left: 10%;
+		width: 80%;
+		height: 32px;
+		box-shadow: 0px 8px 34px rgba(150, 79, 76, 0.32);
+		border-radius: 6px;
+		z-index: -1;
+		pointer-events: none;
+	}
+}
+
+.btn-wrapper {
+	button,
+	input[type="submit"] {
+		position: relative;
+		z-index: 2;
+		width: 100%;
+	}
+	&:before {
+		z-index: 1;
+	}
+}
+
+.btn-link {
+	padding: 0;
+	background: none;
+	border: none;
+	border-radius: 0;
+	color: #23242C;
+	font: inherit;
+	&:before {
+		display: none;
+	}
+}
+
+.readmore {
+	position: relative;
+	text-align: center;
+	overflow: hidden;
+	&__bg-word {
+		font-family: 'Playfair Display';
+		font-style: normal;
+		font-weight: 700;
+		font-size: 143px;
+		line-height: 1;
+		color: #23242C;
+		opacity: 0.04;
+		@media screen and (min-width: 992px) {
+			font-size: 182px;
+		}
+	}
+	&__button {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		font-family: 'Playfair Display';
+		font-weight: 900;
+		font-size: 28px;
+		line-height: 38px;
+		span.btn-lines {
+			&:before,
+			&:after {
+				content: '';
+				display: block;
+				height: 1px;
+				width: 100vw;
+				position: absolute;
+				top: 50%;
+				right: 100%;
+				background: #967675;
+				opacity: 0.6;
+				pointer-events: none;
+				margin: 0 25px;
+			}
+			&:after {
+				left: 100%;
+			}
+		}
+		@media screen and (min-width: 992px) {
+			font-size: 37px;
+			line-height: 49px;
+		}
+	}
+}

@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400&display=swap');
+
+html {
+	font-size: 62.5%;
+}
+
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+	color: #000;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 400;
+	@include font-size(16);
+	@include line-height(26);
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+	font-family: 'Playfair Display', serif;
+	font-weight: 700;
+	color: #000;
+	margin: 1em 0;
+}
+
+h1, .h1 {
+	@include font-size(66);
+	@include line-height(72);
+	@media screen and (min-width: 992px) {
+		@include font-size(102);
+		@include line-height(110);
+	}
+}
+
+h2, .h2 {
+	@include font-size(28);
+	@include line-height(38);
+	@media screen and (min-width: 992px) {
+		@include font-size(48);
+		@include line-height(64);
+	}
+}
+
+h3, .h3 {
+	@include font-size(38);
+	@include line-height(51);
+}
+
+h4, .h4 {
+	@include font-size(24);
+	@include line-height(32);
+}
+
+.subtitle {
+	display: block;
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 24px;
+	color: $style;
+}
+
+p {
+	margin: 0;
+	+ * {
+		margin: 1.5em 0;
+	}
+}
+
+dfn, cite, em, i {
+	font-style: italic;
+}
+
+blockquote {
+	margin: 0 1.5em;
+}
+
+address {
+	margin: 0 0 1.5em;
+}
+
+pre {
+	font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+	@include font-size(16);
+	line-height: 1.6;
+	margin-bottom: 1.6em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1.6em;
+}
+
+code, kbd, tt, var {
+	font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+	@include font-size(16);
+}
+
+abbr, acronym {
+	border-bottom: 1px dotted #444;
+	cursor: help;
+}
+
+mark, ins {
+	text-decoration: none;
+}
+
+big {
+	font-size: 125%;
+}
+

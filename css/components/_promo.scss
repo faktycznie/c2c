@@ -1,0 +1,44 @@
+.promo {
+  padding-bottom: 147px;
+  @media screen and (min-width: 992px) {
+    padding-bottom: 216px;
+  }
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    @media screen and (min-width: 992px) {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 80px;
+    }
+  }
+  &__photo {
+    margin: 0 0 20px;
+    a, img {
+      display: block;
+    }
+    @media screen and (min-width: 992px) {
+      margin: 0;
+      flex-shrink: 0;
+    }
+  }
+  &__heading {
+    margin: 0;
+  }
+  &__description {
+    display: flex;
+    flex-direction: column;
+  }
+  &__btns {
+    margin-top: 10px;
+    .btn {
+      display: block;
+    }
+    @media screen and (min-width: 992px) {
+      margin-top: auto;
+      .btn {
+        display: inline-block;
+      }
+    }
+  }
+}

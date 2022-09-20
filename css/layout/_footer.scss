@@ -1,0 +1,96 @@
+.footer {
+	padding: 75px 0;
+	background: #23242C;
+	color: #fff;
+	@media screen and (min-width: 992px) {
+		padding-top: 139px;
+		padding-bottom: 129px;
+	}
+	&__container {
+		display: flex;
+		flex-direction: column;
+		gap: 50px;
+		@media screen and (min-width: 992px) {
+			flex-direction: row;
+			justify-content: space-between;
+		}
+	}
+	&__brand {
+		display: flex;
+		flex-direction: column;
+	}
+	&__logo {
+		margin: 0 0 32px;
+		position: relative;
+		&:before {
+			content: '';
+			position: absolute;
+			top: 9px;
+			left: -19px;
+			display: block;
+			width: 9px;
+			height: 9px;
+			background: url('../img/decor-light.svg');
+			pointer-events: none;
+		}
+		img {
+			display: block;
+		}
+	}
+	&__slogan {
+		flex-grow: 1;
+		margin: 0 0 32px;
+	}
+	&__widgets {
+		display: flex;
+		flex-direction: column;
+		gap: 60px;
+		@media screen and (min-width: 992px) {
+			flex-direction: row;
+			justify-content: space-between;
+			gap: 70px;
+			margin: 0 0 3em; //to achieve proper position for copyrights ;)
+		}
+		.widget-title,
+		.widgettitle {
+			color: inherit;
+			font-family: inherit;
+			font-weight: 300;
+			font-size: 24px;
+			line-height: 32px;
+			margin: 0 0 13px;
+			position: relative;
+			&:before {
+				content: '';
+				position: absolute;
+				top: 11px;
+				left: -19px;
+				display: block;
+				width: 9px;
+				height: 9px;
+				background: url('../img/decor-light.svg');
+				pointer-events: none;
+			}
+		}
+		ul.menu {
+			min-width: 170px;
+			.menu-item {
+				a {
+					color: inherit;
+					&:hover {
+						color: $style;
+					}
+				}
+			}
+		}
+	}
+	&__copyrights {
+		opacity: 0.5;
+		a {
+			color: inherit;
+			&:hover {
+				color: $style;
+			}
+		}
+	}
+}

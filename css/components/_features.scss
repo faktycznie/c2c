@@ -1,0 +1,39 @@
+.features {
+  padding-bottom: 85px;
+  &__row {
+    gap: 75px;
+  }
+  @media screen and (min-width: 992px) {
+    padding-bottom: 190px;
+    &__row {
+      gap: 0;
+    }
+  }
+}
+
+.feature {
+  &__name {
+    font-style: italic;
+    padding-left: 28px;
+    position: relative;
+    margin: 0 0 29px;
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 9px;
+      height: 9px;
+      background: url('../img/decor.svg');
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  &__desc {
+    margin-top: 29px;
+    font-size: 16px;
+    line-height: 165.9%;
+    color: $style;
+    padding-left: 58px;
+  }
+}
